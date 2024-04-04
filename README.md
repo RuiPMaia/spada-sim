@@ -1,4 +1,6 @@
 # Spada simulator
+Fork that removes unnecessary prints.
+
 ## Install
 Please first install the [Rust toolchain](https://www.rust-lang.org/tools/install).
 
@@ -11,7 +13,7 @@ $ pip install -U pip numpy scipy
 
 ## Build
 ```bash
-$ cargo build --no-default-features
+$ cargo build --release --no-default-features
 ```
 
 ## Workload
@@ -20,7 +22,7 @@ The simulator accepts both MatrixMarket (.mtx) and numpy formatted matrices, wit
 ## Simulate
 First ensure the created python virtual environment is activated. The following command simulates SpGEMM of [cari](https://sparse.tamu.edu/Meszaros/cari) on Spada with the configuration specified in `config/config_1mb_row1.json`.
 ```bash
-(spadaenv) $ ./target/debug/spada-sim accuratesimu spada ss cari config/config_1mb_row1.json
+(spadaenv) $ ./target/release/spada-sim accuratesimu spada ss cari config/config_1mb_row1.json
 ```
 ## Reference
 
