@@ -562,11 +562,11 @@ impl<'a> Simulator<'a> {
                     if self.pes[pe_idx].mem_finish_cycle.is_none() {
                         if self.pes[pe_idx].task.is_some() {
                             let task = self.pes[pe_idx].task.as_ref().unwrap();
-                            print!("pe: {} cur_cycle: {} ", pe_idx, self.exec_cycle);
+                            trace_print!("pe: {} cur_cycle: {} ", pe_idx, self.exec_cycle);
                             if task.merge_mode {
-                                println!("merge");
+                                trace_println!("merge");
                             } else {
-                                println!(
+                                trace_println!(
                                     "anchor: {:?}, shape: {:?}",
                                     self.scheduler.window_tracker[&task.window_token].anchor,
                                     self.scheduler.window_tracker[&task.window_token].shape

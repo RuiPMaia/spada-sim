@@ -1,4 +1,6 @@
 /target
+/matrices
+/spadaenv
 *.out
 *.log
 *.csv
